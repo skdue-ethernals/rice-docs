@@ -17,9 +17,19 @@
       repo: 'https://github.com/skdue-ethernals/rice',
       maxLevel: 4,
       subMaxLevel: 2,
+      search: {
+          noData: {
+            '/': 'No results!',
+          },
+          paths: 'auto',
+          placeholder: {
+            '/': 'Search'
+          }
+        }
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
 </body>
 </html>

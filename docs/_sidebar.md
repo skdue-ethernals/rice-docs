@@ -12,5 +12,6 @@
   - [Tools](tools.md)
   - [Functions](functions.md)
   - [Models](models.md)
-  - [References](ref.md)
+  - [References](references.md)
   - [Glossary](glossary.md)
+  - [Deployed Contracts](contracts.md)

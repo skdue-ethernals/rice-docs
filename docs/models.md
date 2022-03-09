@@ -2,7 +2,7 @@
 This section give you a rough idea of which function does what in a sample way.
 
 # Vote Factory
-Act as a parent of vote sessions.
+Factory of vote sessions.
 
 
 **Atribute**

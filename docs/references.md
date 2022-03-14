@@ -1,6 +1,10 @@
 # References
 
 
+# How to use RANDOM VSF from chainlink
+
+6hours11min38sec[Smart Contract Lottery](https://www.youtube.com/watch?v=M576WGiDBdQ&t=25621s)
+
 # For Random in Vote Session
 
 Vote - setting for Random
@@ -20,3 +24,7 @@ Requirement: address of smart contract that already deploy.
 First		```npx hardhat compile```
 Then <br>
 [![8adf0f54477392cb96cadaa996a4eb13.md.png](https://www.img.in.th/images/8adf0f54477392cb96cadaa996a4eb13.md.png)](https://www.img.in.th/image/7F01sf)
+
+# How to use IPSF to store image for NFT
+
+[HERE](https://dev.to/edge-and-node/building-scalable-full-stack-apps-on-ethereum-with-polygon-2cfb)

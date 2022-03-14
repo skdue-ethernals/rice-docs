@@ -32,8 +32,8 @@ A child of Vote Factory handle vote stuffs.
 
 **UPDATE in Iteration2**
 
-- add 3 atribute to keep first twitterID that got most votes and so on.
-- add method to grab those 3 attribute
+- add array that keep twitterID of all candidate.
+- add method that take twitterID as input and return amount of vote.
 - in end vote add random number to find winner who get NFT
 
 

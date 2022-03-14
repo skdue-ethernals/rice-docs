@@ -96,3 +96,86 @@ after NFT is mint it should go back to close. The way to open is only when `vote
 | Name,Parameters  | Definition                        |
 |------------------|-----------------------------------|
 | mint()  | mint NFT send it to winnerAddress and set state back to closed.   |
+
+
+# Stake  
+Take pair of token to stake in Pool
+
+**Atribute**
+
+| Type                  | Name          | Definition                                  |
+|-----------------------|---------------|---------------------------------------------|
+| PoolFactory             | poolFactory | keep the pool factory contract              |
+
+
+**Method**
+
+| Name,Parameters  | Definition                        |
+|------------------|-----------------------------------|
+| stake(token0,token1,amount token0 amount token1)  | stake token0,token1 by finding exact amount that suit for pool at that time.   |
+| unstake(token0,token1,percent)| take token from stake back follow to percentage you pass in |
+| getStakeAmount(token0,token1)  | get total amount that you have stake from those pool of those tokens             |
+
+# Swap
+Take one kind of ERC20 token and return to other kind of ERC20 token
+
+**Atribute**
+
+| Type                  | Name          | Definition                                  |
+|-----------------------|---------------|---------------------------------------------|
+| PoolFactory             | poolFactory | keep the pool factory contract              |
+| MoneyBall            | MONEYBALL| the contract that keep fees.              |
+
+
+**Method**
+
+| Name,Parameters  | Definition                        |
+|------------------|-----------------------------------|
+| swap(token0,token1,amount token0)  | find pool and begin swap calculation   |
+| getTokenOdds(token0,token1,amount token0)| return amount of token1 you will got back|
+
+# PoolFactory
+Hold all pool address and allow to create them.
+
+**Atribute**
+
+| Type                  | Name          | Definition                                  |
+|-----------------------|---------------|---------------------------------------------|
+| mapping(mapping)           | pools | keep  address token0 lead to token1 that lead to pool address.            |
+
+
+
+**Method**
+
+| Name,Parameters  | Definition                        |
+|------------------|-----------------------------------|
+| createNewPool(token0,token1,amount token0,amount token1)  | create new pool with that tokens and put starter amount in the pool. |
+| getPool(token0,token1)| return pool(type Pool) of input tokens|
+| getPoolAddress(token0,token1)| return pool address of input tokens|
+| getTotalAmountInPool(token0,token1)| return amount of token you have stake in this pool|
+
+# Pool
+All key to stake and swap is locate here.
+
+**Atribute**
+
+| Type                  | Name          | Definition                                  |
+|-----------------------|---------------|---------------------------------------------|
+| ERC20           | token0 | token0 of this pool|
+| ERC20           | token1 | token1 of this pool|
+| uint256          | token0amount | total amount of token0 in this pool|
+| uint256           | token1amount | total amount of token1 in this pool|
+| mapping           | walletToken0 | take staker address map to amount of token0 they stake |
+| mapping           | walletToken1 | take staker address map to amount of token1 they stake|
+
+
+**Method**
+
+| Name,Parameters  | Definition                        |
+|------------------|-----------------------------------|
+| token1NeedForStake(amount token0)  | return amount of token1 need to stake given amount of token0 |
+| token0NeedForStake(amount token1)  | return amount of token0 need to stake given amount of token1 |
+| fillPool(amount token0,amount token1, guy)| put those amount of token in pool from (guy staker's address)|
+| drainPool(percent, guy)| return those amount of token from pool to (guy staker's address)|
+| swap0to1(amount token0, amount token1)| send the amount of token1 to swaper|
+| swap1to0(amount token0, amount token1)| send the amount of token0 to swaper|

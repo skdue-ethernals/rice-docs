@@ -32,20 +32,22 @@ A child of Vote Factory handle vote stuffs.
 
 **UPDATE in Iteration2**
 
-- add array that keep twitterID of all candidate.
-- add method that take twitterID as input and return amount of vote.
-- in end vote add random number to find winner who get NFT
+- [x] add array that keep twitterID of all candidate.
+- [x] add method that take twitterID as input and return amount of vote.
+- [x] rename some attributes
+- [ ] in end vote add random number to find winner who get NFT
 
 
 **Atribute**
 
 | Type                   | Name                   | Definition                                   |
 |------------------------|------------------------|----------------------------------------------|
-| uint                   | voteID                 | // represent this voteID                     |
-| mapping                | riceParticipants       | //map keep address, total used vote (int)    |
-| mapping                | voteMap                | //map keep twitterID (str), total vote (int) |
-| VoteExchange           | voteExchange           | //represent vote exchange’s record contract  |
-| enum {STARTED, ENDED}  | status                 | //check current state                        |
+| uint                   | voteID                 | represent this voteID                        |
+| mapping                | voteMap                | map keep address, total used vote (int)      |
+| mapping                | candidate              | map keep twitterID (str), total vote gain    |
+| string[]               | candidateName          | list of unique candidate names               |
+| VoteExchange           | voteExchange           | represent vote exchange’s record contract    |
+| enum {STARTED, ENDED}  | status                 | check current state                          |
 
 **Method**
 

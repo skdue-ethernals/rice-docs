@@ -13,6 +13,7 @@ Factory of vote sessions.
 | uint         | voteId              | represent current vote session            |
 | address      | owner               | represent admin                           |
 | VoteExchange | voteExchange        | represent vote exchange’s record contract |
+| RiceNFT      | nftContract | represent linked nft contract |
 
 
 
@@ -48,6 +49,7 @@ A child of Vote Factory handle vote stuffs.
 | string[]               | candidateName          | list of unique candidate names               |
 | VoteExchange           | voteExchange           | represent vote exchange’s record contract    |
 | enum {STARTED, ENDED}  | status                 | check current state                          |
+| RiceNFT | nftContract | represent linked nft contract |
 
 **Method**
 
@@ -79,25 +81,26 @@ Keep rice token and give user a right for votes.
 
 
 
-# NFT
+# RiceNFT
 Mint NFT and send to winner.
 
 after `endVote()` in VoteSessions let's set state of this contract to open and send winner address to this contract. After owner come and upload some image to IPSF and press mint button it should mint a NFT and send to winner address.
 
 BEAWARE: owner must not be able to mint NFT if NFT contract is closed.
-after NFT is mint it should go back to close. The way to open is only when `voteEnd()`. Only owner is allow to mint.
+after NFT is mint it should go back to close. The way to open is only when owner call `endVote()` from a `VoteSession` contract. Only owner is allow to mint.
 
 
 | Type                  | Name          | Definition                                  |
 |-----------------------|---------------|---------------------------------------------|
-| address               | winnerAddress | hold the address to sent NFT to.               |
+| address               | owner | represent admin               |
 | enum {OPENED, CLOSED} | status        | keep status of contract                     |
 
 **Method**
 
 | Name,Parameters  | Definition                        |
 |------------------|-----------------------------------|
-| mint()  | mint NFT send it to winnerAddress and set state back to closed.   |
+| award(_to, tokenURI)  | mint NFT send it to winnerAddress and set state back to closed.   |
+| openNFT()             | allow to mint new nft after `VoteSession` is ended |
 
 
 # Stake  

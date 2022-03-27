@@ -97,10 +97,10 @@ after NFT is mint it should go back to close. The way to open is only when owner
 
 **Method**
 
-| Name,Parameters  | Definition                        |
-|------------------|-----------------------------------|
+| Name,Parameters       | Definition                                                        |
+|-----------------------|-------------------------------------------------------------------|
 | award(_to, tokenURI)  | mint NFT send it to winnerAddress and set state back to closed.   |
-| openNFT()             | allow to mint new nft after `VoteSession` is ended |
+| openNFT()             | allow to mint new nft after `VoteSession` is ended.               |
 
 
 # Stake  

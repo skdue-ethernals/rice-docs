@@ -35,4 +35,35 @@ this section we will show what's the main tools we use in this project.
 <br>
   <b>Metamask</b> helps to handle account management and connecting the current user to the blockchain. MetaMask enables users to manage their accounts and keys in a few different ways while isolating them from the site context.
 <br>
+</details><br>
+
+
+<details>
+<summary><b>Chainlink VRF </b></summary>
+<br>
+  <b>Chainlink VRF</b>  provide a randomness that can be reliable to give us random person who get nft.
+<br>
+</details><br>
+
+<details>
+<summary><b>IPFS</b></summary>
+<br>
+  <b>IPFS</b>   to managing and holding our NFT's metadata.
+<br>
+</details><br>
+
+
+
+<details>
+<summary><b>ALCHEMY NFT API </b></summary>
+<br>
+  <b>ALCHEMY NFT API </b>  It manage data from chain about your NFT which really robust, orderly and faster. We use it to fetch all ours nft that user own.
+<br>
+</details><br>
+
+<details>
+<summary><b>Spheron </b></summary>
+<br>
+  <b>Spheron </b>  for deploy ours website.
+<br>
 </details>

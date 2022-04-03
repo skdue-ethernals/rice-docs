@@ -14,4 +14,3 @@
   - [Models](models.md)
   - [References](references.md)
   - [Glossary](glossary.md)
-  - [Deployed Contracts](contracts.md)
